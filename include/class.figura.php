@@ -5,9 +5,11 @@
 		private $tipo;
 		private $a; //area
 		private $p; //perimetro
+		private $al; //altura
 		
 		public static function get_form(){
 			$html = '
+			
 			<form name="figuras" method="POST" action="" >
 			<table border=0 align="center">
 				<tr>
@@ -17,10 +19,10 @@
 					<td>Tipo: </td>
 					<td>
 						<select name="tipo" OnChange=habilitar(document.figuras);>
-							<option value="sel">Seleccione...</option>
-							<option value="trapecio">Trapecio</option>
+							<option value="sel">Seleccione</option>
 							<option value="rombo">Rombo</option>
 							<option value="romboide">Romboide</option>
+							<option value="trapecio">Trapecio</option>
 						</select>
 					</td>
 				</tr>
@@ -39,17 +41,16 @@
 				<tr>
 					<td>Lado 4:</td>
 					<td><input type="text" name="lado_4"size="4" disabled></td>
-				</tr>
+				</tr>	
 				<tr>
 					<td>Altura:</td>
 					<td><input type="text" name="altura"size="4" disabled></td>
-				</tr>							
+				</tr>						
 				<tr>
 					<th colspan="2"><input type="submit" name="calcular" value="Calcular"></th>
 				</tr>
 			</table>
-			</form>
-			<script type="text/javascript" src="./script/validar.js"></script>';
+			</form>';
 			return $html;
 		}
 		
