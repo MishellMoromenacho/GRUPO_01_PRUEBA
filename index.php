@@ -37,6 +37,7 @@
 			$fig->perimetro();
 			echo "El área del " . $fig->GetTipo() . " es: " . $fig->GetArea();
 			echo "<br>El perímetro del " . $fig->GetTipo() . " es: " . $fig->GetPerimetro();
+			?><a href="javascript: history.go(-1)"><br>Volver</a><?php
 		}
 	?>
 	
